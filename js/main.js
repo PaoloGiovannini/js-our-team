@@ -34,9 +34,13 @@ let membri = [
 
 
 for (let i = 0; i < membri.length; i++) {
-
+    let elenco = "";
     const personaCorrente = membri[i];
-    const elenco = personaCorrente['nome'] + " " + personaCorrente['ruolo'] + " " +  personaCorrente['foto'];
+    
+    for (let key in personaCorrente){
+        elenco += personaCorrente[key] + " "; 
+    }
+    
 	console.log(elenco);
     let li = document.createElement('li');
     li.append(elenco);
