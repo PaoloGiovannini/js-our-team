@@ -1,4 +1,4 @@
-const listaDom = document.getElementById('lista')
+const listaDom = document.getElementById('lista');
 let membri = [
     {
         "nome" : 'Wayne Barnett',
@@ -32,3 +32,15 @@ let membri = [
     },
 ]
 
+
+for (let i = 0; i < membri.length; i++) {
+
+    const personaCorrente = membri[i];
+    const elenco = personaCorrente['nome'] + " " + personaCorrente['ruolo'] + " " +  personaCorrente['foto'];
+	console.log(elenco);
+    let li = document.createElement('li');
+    li.append(elenco);
+    listaDom.append(li);
+    
+    
+}
